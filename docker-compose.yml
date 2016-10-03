@@ -2,23 +2,12 @@ version: '2'
 services:
   loopback:
     build:
-      context: loopback/.
+      context: .
       dockerfile: Dockerfile
     command: npm start
     ports:
       - "3000:3000"
     volumes:
-      - ${PWD}/loopback:/app
+      - ${PWD}:/app
     environment:
       - PORT=3000
-  restify:
-    build:
-      context: restify/.
-      dockerfile: Dockerfile
-    command: npm start
-    ports:
-      - "3001:3001"
-    volumes:
-      - ${PWD}/restify:/app
-    environment:
-      - PORT=3001
