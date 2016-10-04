@@ -22,3 +22,14 @@ services:
       - ${PWD}/restify:/app
     environment:
       - PORT=3001
+  actionhero:
+    build:
+      context: actionhero/.
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - "3002:3002"
+    volumes:
+      - ${PWD}/actionhero:/app
+    environment:
+      - PORT=3002
