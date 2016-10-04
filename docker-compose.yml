@@ -44,3 +44,14 @@ services:
       - ${PWD}/hapi:/app
     environment:
       - PORT=3003
+  socket_io:
+    build:
+      context: socket_io/.
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - "3004:3004"
+    volumes:
+      - ${PWD}/socket_io:/app
+    environment:
+      - PORT=3004
