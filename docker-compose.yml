@@ -55,3 +55,14 @@ services:
       - ${PWD}/socket_io:/app
     environment:
       - PORT=3004
+  koa:
+    build:
+      context: koa/.
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - "3005:3005"
+    volumes:
+      - ${PWD}/koa:/app
+    environment:
+      - PORT=3005
