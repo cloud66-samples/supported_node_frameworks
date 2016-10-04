@@ -1,68 +1,13 @@
 version: '2'
 services:
-  loopback:
-    build:
-      context: loopback/.
-      dockerfile: Dockerfile
-    command: npm start
-    ports:
-      - "3000:3000"
-    volumes:
-      - ${PWD}/loopback:/app
-    environment:
-      - PORT=3000
-  restify:
-    build:
-      context: restify/.
-      dockerfile: Dockerfile
-    command: npm start
-    ports:
-      - "3001:3001"
-    volumes:
-      - ${PWD}/restify:/app
-    environment:
-      - PORT=3001
-  actionhero:
-    build:
-      context: actionhero/.
-      dockerfile: Dockerfile
-    command: npm start
-    ports:
-      - "3002:3002"
-    volumes:
-      - ${PWD}/actionhero:/app
-    environment:
-      - PORT=3002
-  hapi:
-    build:
-      context: hapi/.
-      dockerfile: Dockerfile
-    command: npm start
-    ports:
-      - "3003:3003"
-    volumes:
-      - ${PWD}/hapi:/app
-    environment:
-      - PORT=3003
-  socket_io:
-    build:
-      context: socket_io/.
-      dockerfile: Dockerfile
-    command: npm start
-    ports:
-      - "3004:3004"
-    volumes:
-      - ${PWD}/socket_io:/app
-    environment:
-      - PORT=3004
   koa:
     build:
-      context: koa/.
+      context: .
       dockerfile: Dockerfile
     command: npm start
     ports:
       - "3005:3005"
     volumes:
-      - ${PWD}/koa:/app
+      - ${PWD}:/app
     environment:
       - PORT=3005
