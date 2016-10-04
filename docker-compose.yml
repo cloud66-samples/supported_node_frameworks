@@ -33,3 +33,14 @@ services:
       - ${PWD}/actionhero:/app
     environment:
       - PORT=3002
+  hapi:
+    build:
+      context: hapi/.
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - "3003:3003"
+    volumes:
+      - ${PWD}/hapi:/app
+    environment:
+      - PORT=3003
