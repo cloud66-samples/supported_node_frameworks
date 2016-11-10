@@ -1,0 +1,14 @@
+{
+	"name": "example_node_workers",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "^4.10.6",
+		"mysql": "^2.5.4",
+		"mongoose": "~3.6.13",
+		"morgan": "~1.7.0",
+		"node-uuid": "~1.4.7"
+	},
+	"engines": {
+		"node": ">6.7"
+	}
+}
