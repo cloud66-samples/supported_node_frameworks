@@ -14,8 +14,7 @@ server.route({
     method: 'GET',
     path:'/hello', 
     handler: function (request, reply) {
-
-        return reply('hello world');
+        return reply('hello world from' + process.env.HOST);
     }
 });
 
